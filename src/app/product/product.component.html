@@ -1,0 +1,20 @@
+<nav class="fixed-nav-bar">
+    <app-nav></app-nav>
+</nav>
+<div class="row" style="justify-content: space-around;">
+    <div class="col-lg-3" *ngFor="let item of allProducts | searchitem:searchkey:'product_type'">
+        <div class="card mx-auto card-style">
+            <img class="img-style card-img-top" src="{{item.product_img_src}}" alt="{{item.product_info}}">
+            <div class="card-body" style="text-align: center;padding:8px;">
+                <h5 class="card-title" style="margin-bottom:3px;">₹ {{item.price}}</h5>
+                <p class="card-text" style="margin-bottom:10px;">{{item.product_info}}</p>
+                <span *ngIf="item.quantity_available!=0">
+                        <a (click)="addToCart(item.product_id)" class="btn" style="background-color: #fc0388; color: white;">Add to Cart</a>
+                </span>
+                <span *ngIf="item.quantity_available==0">
+                    <a class="btn disabled" style="color: white;">Out of Stock</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

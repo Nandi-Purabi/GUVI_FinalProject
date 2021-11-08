@@ -1,0 +1,153 @@
+<nav class="fixed-nav-bar">
+    <app-nav></app-nav>
+</nav>
+<div class="card-top">
+    <div class="row card-shadow" style="justify-content: space-around;">
+        <div class="col-lg-2 item">
+            <a routerLink="/product/All/Products">
+                <img class="img-size img-crop" src="https://cdn-icons-png.flaticon.com/512/6009/6009747.png">
+                <h6>All Products</h6>
+            </a>
+        </div>
+        <div class="col-lg-2 item">
+            <a routerLink="/product/Women/Fashion"> 
+                <img class="img-size img-crop" src="assets/img/women-crop.jpg">
+                <h6>Women Fashion</h6>
+            </a>
+        </div>
+        <div class="col-lg-2 item">
+            <a routerLink="/product/Men/Fashion">
+                <img class="img-size img-crop" src="assets/img/men-crop.jpg">
+                <h6>Men Fashion</h6>
+            </a>
+        </div>
+        <div class="col-lg-2 item">
+            <a routerLink="/product/Kids/Fashion">
+                <img class="img-size img-crop" src="assets/img/kids-crop.jpg">
+                <h6>Kids Fashion</h6>
+            </a>
+        </div>
+        <div class="col-lg-2 item">
+            <a routerLink="/product/All/Electronics">
+                <img class="img-size img-crop" src="assets/img/electronic-crop.jpg">
+                <h6>Electronics</h6>
+            </a>
+        </div>
+        <div class="col-lg-2 item">
+            <a routerLink="/product/All/Accessories">
+                <img class="img-size img-crop" src="assets/img/jewellery.jpg">
+                <h6>Accessories</h6>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="topic-margin">
+    <h3>Trending Now</h3>
+    <ngb-carousel class="col-lg-12">
+        <ng-template ngbSlide *ngFor="let image of trending">
+          <div class="wrapper"  routerLink="/product/{{image.id1}}/{{image.id2}}">
+            <img class="image-size" [src]="image.src" alt="Trending">
+          </div>
+        </ng-template>
+      </ngb-carousel>
+</div>
+<div class="topic-margin">
+    <h3 style="margin-top: 40px ;">Popular in Women Fashion</h3>
+    <div>
+        <div class="row" style="justify-content: space-evenly;text-align: center; ">
+            <div class="col-lg-3 img-hover" routerLink="/product/Women/Jacket">
+                <img class="popular-img-size" src="http://sc04.alicdn.com/kf/H1da1d6e013ea4f1b8bed17fc2f9494d7w.jpg" alt="Cool Print Jackets">
+                <div><b>Cool Print Jackets</b></div>
+            </div>
+            <div class="col-lg-3 img-hover" routerLink="/product/Women/Winter">
+                <img class="popular-img-size" src="https://pyxis.nymag.com/v1/imgs/161/8b8/971758de28db114ee0687e6c6cf886f147-17-paris-mens-street-style.2x.rsquare.w536.jpg" alt="Winter Wear">
+                <div><b>Winter Wear</b></div>
+            </div>
+            <div class="col-lg-3 img-hover" routerLink="/product/Women/Dress">
+                <img class="popular-img-size" src="https://www.fashionkibatain.com/wp-content/uploads/2017/05/summer-fashion-trends-3.jpg" alt="Cute Dresses">
+                <div><b>Cute Dresses</b></div>
+            </div>
+            <div class="col-lg-3 img-hover" routerLink="/product/Women/Shoes">
+                <img class="img-fluid popular-img-size" src="https://i.pinimg.com/originals/2a/46/e9/2a46e9cebbcd3d0cd594f22084ca6d7e.png" alt="Elegant Boots">
+                <div><b>Elegant Boots</b></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="topic-margin">
+    <h3 style="margin-top: 40px ;">Popular in Men Fashion</h3>
+    <div>
+        <div class="row" style="justify-content: space-evenly;text-align: center;">
+            <div class="col-lg-3 img-hover" routerLink="/product/Men/Formal">
+                <img class="img-fluid popular-img-size" src ="https://www.michaelandrews.com/mabcms/wp-content/uploads/2017/10/Shoulder-Style-1.jpg" alt="Formal Wear">
+                <div><b>Formal Wear</b></div>
+            </div>
+            <div class="col-lg-3 img-hover" routerLink="/product/Men/Sunglass">
+                <img class="img-fluid popular-img-size" src="https://5.imimg.com/data5/WS/HC/MY-65609746/440090968-2021816510-500x500.jpg" alt="Cool Shades"> 
+                <div><b>Cool Shades</b></div>
+            </div>
+            <div class="col-lg-3 img-hover" routerLink="/product/Men/Shirt">
+                <img class="img-fluid popular-img-size" src="https://lugako.com/wp-content/uploads/2019/03/78d9a6967fda1840598d73576c5c0380-e1552912510195-564x560.jpg" alt="Floral Print Shirts">
+                <div><b>Trendy Shirts</b></div>
+            </div>
+            <div class="col-lg-3 img-hover" routerLink="/product/Men/Watch">
+                <img class="img-fluid popular-img-size" src="https://cf.shopee.com.my/file/429312c8a11cbcf54b053ed735ed949e" alt="Smart Watches">
+                <div><b>Smart Watches</b></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="topic-margin">
+    <h3 style="margin-top: 40px ;">Popular in Kids Fashion</h3>
+    <div>
+        <div class="row" style="justify-content: space-evenly;text-align: center;">
+            <div class="col-lg-3 img-hover" routerLink="/product/Kids/Ethnic">
+                <img class="img-fluid popular-img-size" src ="https://cdn.shopify.com/s/files/1/0266/6276/4597/files/floral_ethnic_wear_for_kids_by_utsa.jpg?v=1597833877" alt="Ethnic Wear">
+                <div><b>Ethnic Wear</b></div>
+            </div>
+            <div class="col-lg-3 img-hover" routerLink="/product/Kids/Western">
+                <img class="img-fluid popular-img-size" src="https://i.pinimg.com/originals/db/57/f3/db57f30ae3f813bca7e3bcd79d3e7c79.jpg" alt="Street Style">
+                <div><b>Street Style</b></div>
+            </div>
+            <div class="col-lg-3 img-hover" routerLink="/product/Kids/Gown">
+                <img class="img-fluid popular-img-size" src="https://static.fibre2fashion.com/MemberResources/LeadResources/1/2019/8/Seller/19166999/Images/19166999_0_kids-party-dress.jpg" alt="Fancy Gowns"> 
+                <div><b>Fancy Gowns</b></div>
+            </div>
+            <div class="col-lg-3 img-hover" routerLink="/product/Kids/Shoes">
+                <img class="img-fluid popular-img-size" src="https://image.dhgate.com/0x0/f2/albu/g18/M01/31/B4/rBVapWBCJ9CAEEk_AANgWihs4f0179.jpg" alt="LED Shoes">
+                <div><b>LED Shoes</b></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="topic-margin">
+    <h3 style="margin-top: 40px ;">Heavy Discount on Electronics</h3>
+    <div>
+        <div class="row" style="justify-content: space-evenly;text-align: right; ">
+            <div class="col-lg-3 img-hover" routerLink="/product/Electronics/Mobile">
+                <img class="popular-img-size" src="https://cdn.vox-cdn.com/thumbor/f51VLIWOrcbYtuT8FkahYOpMJJE=/0x0:1000x1000/1800x1800/filters:focal(500x500:501x501)/cdn.vox-cdn.com/uploads/chorus_asset/file/22214156/ajohnson200104_4354_0001sq.jpg" alt="Mobile Phones">
+                <div>
+                    <b>Mobile Phones</b><br><b>Atleast 20% OFF</b>
+                </div>
+            </div>
+            <div class="col-lg-3 img-hover" routerLink="/product/Electronics/Earbud">
+                <img class="popular-img-size" src="https://www.beatsbydre.com/content/dam/beats/web/product/earbuds/beats-fit-pro/plp/bbd.plpasset.earbuds.fitpro-v2.jpg.large.1x.jpg" alt="EarBuds">
+                <div>
+                    <b>Earbuds</b><br><b>Atleast 30% OFF</b>
+                </div>
+            </div>
+            <div class="col-lg-3 img-hover" routerLink="/product/Electronics/Laptop">
+                <img class="popular-img-size" src="assets/img/laptop-crop.jpg" alt="Laptops">
+                <div>
+                    <b>Laptops</b><br><b>Atleast 15% OFF</b>
+                </div>
+            </div>
+            <div class="col-lg-3 img-hover" routerLink="/product/Electronics/Fridge">
+                <img class="img-fluid popular-img-size" src="assets/img/fridge-crop.jpg" alt="Fridge">
+                <div>
+                    <b>Fridge</b><br><b>Atleast 25% OFF</b>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

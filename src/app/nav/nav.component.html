@@ -1,0 +1,24 @@
+
+    <div class="navbar shadow color-main row">
+            <div class="col-lg-3">
+                <img style="height:35px;padding-left: 5px;" src = "assets/img/Kaya Fashions Logo.png">
+            </div>
+            <div class="form-group col-lg-6" style="position: relative; padding: 0px;">
+                <input type="text" placeholder="   Search Products" class="search form-control" [(ngModel)]="searchTerm" (keyup)="search($event)">
+                <a><i class="fas fa-search search-icon"></i></a>
+            </div>
+            <div class="col-lg-3">
+                <div class="row" style="text-align: center; justify-content: space-evenly;">
+                    <div class="col-lg-4 padding"><a (click)="gotohome()"><b>Home</b></a></div>
+                    <div class="col-lg-4 padding">
+                        <a (click)="gotocart()">
+                          <i class="fas fa-cart-plus"></i>
+                            <div style="font-size:10px;" class="badge bg-danger">{{cartBasedonID.length}}</div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 padding">
+                        <span><a  (click)="changeStatus()"><b>Logout</b></a></span>
+                    </div>
+                </div>
+        </div>
+    </div> 
