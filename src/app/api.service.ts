@@ -10,7 +10,7 @@ import { productList, userList, userCartList1, userCartList2 } from './model';
 export class ApiService {
   public search=new BehaviorSubject<string>("");
   currentUserID:number=0;
-  readonly ApiUrl = "https://purabinandi-001-site1.etempurl.com/api";
+  readonly ApiUrl = "http://purabinandi-001-site1.etempurl.com/api";
 
   constructor(private http:HttpClient) {}
 
