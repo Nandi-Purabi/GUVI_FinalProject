@@ -79,6 +79,9 @@ h3{
     cursor: pointer;
     
    }
+.wrapper{
+  cursor:pointer;
+}
    
    .img-hover:hover div{
     width: 60%;
